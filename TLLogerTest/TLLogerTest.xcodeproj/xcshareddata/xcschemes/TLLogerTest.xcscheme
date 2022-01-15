@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A310A13B278C9118001CDE54"
-               BuildableName = "TLLogerTest.framework"
+               BlueprintIdentifier = "A310A145278C9119001CDE54"
+               BuildableName = "TLLogerTest.xctest"
                BlueprintName = "TLLogerTest"
                ReferencedContainer = "container:TLLogerTest.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A310A145278C9119001CDE54"
-               BuildableName = "TLLogerTestTests.xctest"
+               BuildableName = "TLLogerTest.xctest"
                BlueprintName = "TLLogerTest"
                ReferencedContainer = "container:TLLogerTest.xcodeproj">
             </BuildableReference>
@@ -60,8 +60,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A310A13B278C9118001CDE54"
-            BuildableName = "TLLogerTest.framework"
+            BlueprintIdentifier = "A310A145278C9119001CDE54"
+            BuildableName = "TLLogerTest.xctest"
             BlueprintName = "TLLogerTest"
             ReferencedContainer = "container:TLLogerTest.xcodeproj">
          </BuildableReference>

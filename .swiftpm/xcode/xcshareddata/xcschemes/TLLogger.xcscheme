@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A310A145278C9119001CDE54"
-               BuildableName = "TLLogerTestTests.xctest"
+               BuildableName = "TLLogerTest.xctest"
                BlueprintName = "TLLogerTest"
                ReferencedContainer = "container:TLLogerTest/TLLogerTest.xcodeproj">
             </BuildableReference>
