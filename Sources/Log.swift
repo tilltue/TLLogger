@@ -39,6 +39,16 @@ public final class Log {
         logData.insert(.init(level, message), at: 0)
     }
     
+    public func filtered(_ levels: [Level]) -> [LogData] {
+        return logData.filter{ levels.contains($0.level) }
+    }
+    
+    public func search(_ keyword: String) -> [LogData] {
+        return logData.filter{
+            $0.message.lowercased().contains(keyword.lowercased())
+        }
+    }
+    
     public var dataSources: [LogData] {
         return logData
     }
