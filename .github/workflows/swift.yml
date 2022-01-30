@@ -1,0 +1,37 @@
+name: commit workflow
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    name: Logger Tests
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        xcode: [13.2.1]
+        destination: ['platform=iOS Simulator,name=iPhone 12']
+    
+    steps:
+      - run: swift --version
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Logger Tests
+        id: logger_tests
+        run: |
+          xcodebuild clean build \
+          -workspace Log.xcworkspace \
+          -scheme TLLogerTest \
+          -destination "${destination}" \
+          -configuration Debug \
+          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=YES test | xcpretty -c; echo "::set-output name=result::${PIPESTATUS[0]}"; echo "${PIPESTATUS[0]}"
+        env:
+          destination: ${{ matrix.destination }}
+
+      - name: Check Tests Result
+        if: steps.logger_tests.outputs.result != 0
+        run: |
+          echo "Tests Failed"; exit 1    
