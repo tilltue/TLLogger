@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		A310A14C278C9119001CDE54 /* TLLogerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310A14B278C9119001CDE54 /* TLLogerTests.swift */; };
 		A310A15A278C9162001CDE54 /* TLLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A310A159278C9162001CDE54 /* TLLogger */; };
+		A3C85F61288C7C9600FC1DEF /* HTTPLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C85F60288C7C9600FC1DEF /* HTTPLogTests.swift */; };
+		A3C85F63288C7CC100FC1DEF /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C85F62288C7CC100FC1DEF /* Base.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A310A146278C9119001CDE54 /* TLLogerTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TLLogerTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A310A14B278C9119001CDE54 /* TLLogerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLLogerTests.swift; sourceTree = "<group>"; };
+		A3C85F60288C7C9600FC1DEF /* HTTPLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogTests.swift; sourceTree = "<group>"; };
+		A3C85F62288C7CC100FC1DEF /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,9 @@
 		A310A14A278C9119001CDE54 /* TLLogerTests */ = {
 			isa = PBXGroup;
 			children = (
+				A3C85F62288C7CC100FC1DEF /* Base.swift */,
 				A310A14B278C9119001CDE54 /* TLLogerTests.swift */,
+				A3C85F60288C7C9600FC1DEF /* HTTPLogTests.swift */,
 			);
 			path = TLLogerTests;
 			sourceTree = "<group>";
@@ -107,6 +113,8 @@
 				Base,
 			);
 			mainGroup = A310A132278C9118001CDE54;
+			packageReferences = (
+			);
 			productRefGroup = A310A13D278C9118001CDE54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C85F63288C7CC100FC1DEF /* Base.swift in Sources */,
+				A3C85F61288C7C9600FC1DEF /* HTTPLogTests.swift in Sources */,
 				A310A14C278C9119001CDE54 /* TLLogerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -105,10 +105,30 @@ class TLLogerTests: XCTestCase {
                                                   .init(.verbose, "verbose level log 1")])
         parameterizedTests(keyword: "VERBOSE", expect: [.init(.verbose, "verbose level log 1")])
     }
-}
-
-extension Log.LogData: Equatable {
-    public static func==(lhs: Self, rhs: Self) -> Bool {
-        return lhs.level == rhs.level && lhs.message == rhs.message
+    
+    func testGeneralLog() {
+        // Arrange
+        let sut = Log()
+        sut.log(.verbose, "verbose level log 1")
+        
+        // Act
+        let dataSources = sut.dataSources
+        
+        // Assert
+        XCTAssertEqual(dataSources.count, 1)
+        XCTAssertEqual(dataSources[0].category, .general)
+    }
+    
+    func testNetworkLog() {
+        let dummy = Log.NetworkDataResponse(request: nil, response: HTTPURLResponse(), metrics: nil, responseData: nil)
+        let sut = Log()
+        sut.log(.verbose, "verbose level log 1", dummy)
+        
+        // Act
+        let dataSources = sut.dataSources
+        
+        // Assert
+        XCTAssertEqual(dataSources.count, 1)
+        XCTAssertEqual(dataSources[0].category, .network)
     }
 }
