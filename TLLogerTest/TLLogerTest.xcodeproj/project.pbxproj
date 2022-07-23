@@ -11,6 +11,7 @@
 		A310A15A278C9162001CDE54 /* TLLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A310A159278C9162001CDE54 /* TLLogger */; };
 		A3C85F61288C7C9600FC1DEF /* HTTPLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C85F60288C7C9600FC1DEF /* HTTPLogTests.swift */; };
 		A3C85F63288C7CC100FC1DEF /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C85F62288C7CC100FC1DEF /* Base.swift */; };
+		A3C85F66288C7F1C00FC1DEF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3C85F65288C7F1C00FC1DEF /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A310A15A278C9162001CDE54 /* TLLogger in Frameworks */,
+				A3C85F66288C7F1C00FC1DEF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = TLLogerTest;
 			packageProductDependencies = (
 				A310A159278C9162001CDE54 /* TLLogger */,
+				A3C85F65288C7F1C00FC1DEF /* Alamofire */,
 			);
 			productName = TLLogerTestTests;
 			productReference = A310A146278C9119001CDE54 /* TLLogerTest.xctest */;
@@ -114,6 +117,7 @@
 			);
 			mainGroup = A310A132278C9118001CDE54;
 			packageReferences = (
+				A3C85F64288C7F1C00FC1DEF /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A310A13D278C9118001CDE54 /* Products */;
 			projectDirPath = "";
@@ -325,10 +329,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A3C85F64288C7F1C00FC1DEF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		A310A159278C9162001CDE54 /* TLLogger */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TLLogger;
+		};
+		A3C85F65288C7F1C00FC1DEF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3C85F64288C7F1C00FC1DEF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
